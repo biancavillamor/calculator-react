@@ -125,35 +125,47 @@ const App = () => {
   };
 
   const handleExponent = event => {
-    const val = event.target.innerHTML;
+    const val = event.target.innerHTML
+    let tempVal = value ? parseFloat(value) : 0;
+    let tempAns = ans ? parseFloat(ans) : 0;
     if (val === "x^2") {
-      setValue(Math.pow(value, 2));
+      setValue(Math.pow(tempVal, 2));
+      setAns(Math.pow(tempAns, 2));
     }
     if (val === "x^3") {
-      setValue(Math.pow(value, 3));
+      setValue(Math.pow(tempVal, 3));
+      setAns(Math.pow(tempAns, 3));
     }
     if (val === "10^x") {
-      setValue(Math.pow(10, value));
+      setValue(Math.pow(10, tempVal));
+      setAns(Math.pow(10, tempAns));
     }
     if (val === "e^x") {
-      setValue(Math.pow(2.718281, value));
+      setValue(Math.pow(2.718281, tempVal))
+      setAns(Math.pow(2.718281, tempAns));
     }
     else {
-      setValue(Math.pow(value, 0.5));
+      setValue(Math.pow(tempVal, 0.5));
+      setAns(Math.pow(tempAns, 0.5));
     }
     event.preventDefault();
   };
 
   const handleTriangle = event => {
+    let tempVal = value ? parseFloat(value) : 0;
+    let tempAns = ans ? parseFloat(ans) : 0;
     const val = event.target.innerHTML;
     if (val === "sin") {
-      setValue(Math.sin(value));
+      setValue(Math.sin(tempVal));
+      setAns(Math.sin(tempAns));
     }
     if (val === "cos") {
-      setValue(Math.cos(value));
+      setValue(Math.cos(tempVal));
+      setAns(Math.cos(tempAns));
     }
     if (val === "tan") {
-      setValue(Math.cos(value));
+      setValue(Math.tan(tempVal));
+      setAns(Math.tan(tempAns));
     }
 
     event.preventDefault();
