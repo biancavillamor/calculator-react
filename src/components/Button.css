@@ -1,0 +1,16 @@
+button {
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(148, 104, 189);
+    font-size: large;
+    font-weight: bolder;
+    color: white
+}
+
+button:hover {
+    background-color: rgb(176, 115, 233);
+}
+
+/* .zero {
+    grid-column: 3/5
+} */
