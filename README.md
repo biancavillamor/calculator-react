@@ -1,6 +1,6 @@
 # Calculator App
 
-This is a project to create a functional calculatr app using React.
+This is a project to create a functional calculator app using React.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
